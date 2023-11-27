@@ -1,0 +1,72 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">View and respond to defence</h1>
+          </div> <!-- Close the "case-header" container -->
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
+
+          <h2 class="govuk-heading-m">Statement of truth</h2>
+
+            <p>The defendant believes that the facts stated in the response are true.</p>
+
+            <p>I am duly authorised by the defendant to sign this statement.</p>
+
+            <p>The defendant understands that proceedings for ontempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document
+                verified by a statement of truth without an honest belief in its truth.
+            </p>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="event-name">
+                  Full name
+                </label>
+                <input class="govuk-input" id="event-name" name="eventName" type="text">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="event-name">
+                  Role
+                </label>
+                <input class="govuk-input" id="event-name" name="eventName" type="text">
+              </div>
+
+              <p>In order to verify the response to claim by a statement of truth please click 'submit' on the next screen. Doing so will be taken
+                as verifying the response by the above statement of truth. Alternatively, you will have the opportunity, on the next screen, to change
+                any of the answers before clicking the 'submit' button.
+              </p>
+ 
+
+          <div class="govuk-button-group">
+            <a href="vulnerability-questions-claimant.html">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Previous
+              </button>
+            </a>
+            <a href="check-answers-claimant.html">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+            </a>
+          </div>
+
+          <div class="govuk-button-group">
+          <a class="govuk-link" href="start-dashboard-claimant.html">Cancel</a>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

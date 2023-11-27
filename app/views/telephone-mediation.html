@@ -1,0 +1,81 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">Respond to claim</h1>
+          </div> <!-- Close the "case-header" container -->
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
+  
+          <h1 class="govuk-heading-m">
+            Telephone mediation
+          </h1>
+      
+          <p>The claimant has reviewed your defence and intends to proceed with the claim. The next step is mediation. A telephone mediation appointment will be scheduled at no additional cost.</p>
+      
+          <p>An impartial mediator will speak with both parties to see if an agreement can be reached before the case goes to court. You will be able to explain your party’s position in more detail.</p>
+      
+          <p>Mediation will last no longer than one hour and will take place by telephone. </p>
+      
+          <h2 class="govuk-heading-m">
+            What happens at mediation?
+          </h2>
+      
+          <p class="govuk-body">We will arrange a phone call with a mediator from the Small Claims Mediation Service. The
+            mediator will:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>listen to each side separately – you will not talk directly to the other side</li>
+            <li>ask you to consider what the other side says</li>
+            <li>help you reach an agreement, if possible</li>
+          </ul>
+      
+          <h2 class="govuk-heading-m">
+            What happens if you do not attend your mediation appointment?
+          </h2>
+          <p>If the mediation appointment is not attended by you or your client, the judge may apply a penalty. 
+            This could include the judge ordering your client to pay costs, or automatically ruling in the other party’s favour.</p>
+      
+          <h2 class="govuk-heading-m">
+            After the phone call
+          </h2>
+      
+          <p>If mediation is successful, you will not have to go to court. You will make an agreement over the phone, which we will email to you. You will not have to sign anything, but the agreement is binding.</p>
+          <p>If either party breaks the terms of the agreement, the other party can go back to the court to ask for a judgment or hearing.</p>
+          <p>If you do not reach an agreement at mediation, you may need to attend a court hearing. Any mediation discussions cannot be mentioned at the hearing.</p>
+
+          <div class="govuk-!-padding-bottom-3"></div>
+
+          <div class="govuk-button-group">
+            <a href="respond-to-claim-2.html">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Previous
+              </button>
+            </a>
+            <a href="email-address.html">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+            </a>
+          </div>
+
+          <div class="govuk-button-group">
+          <a class="govuk-link" href="start-dashboard-defendant.html">Cancel</a>
+        </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+{% endblock %}

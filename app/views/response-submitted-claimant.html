@@ -1,0 +1,57 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">View and respond to defence</h1>
+          </div> <!-- Close the "case-header" container -->
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
+
+ 
+                  <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                      You have decided to proceed with the claim
+                    </h1>
+                    <div class="govuk-panel__body">
+                      Claim number: <strong>HDJ2123F</strong>
+                    </div>
+                  </div>
+
+                  <h2 class="govuk-heading-m">What happens next</h2>
+
+                  <p class="govuk-body">We'll review the case and contact you about what to do next.</p>     
+                    
+                    <p class="govuk-body">
+                    <a href="#" class="govuk-link">Download questionnaire (opens in a new tab) </a>
+                      </p>
+
+            </a>
+            <a href="case-list-claimant.html">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue and return to case details
+              </button>
+            </a>
+
+            <div class="govuk-button-group">
+                <a class="govuk-link" href="start-dashboard-claimant.html">Cancel</a>
+              </div>
+          </div>
+
+         
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

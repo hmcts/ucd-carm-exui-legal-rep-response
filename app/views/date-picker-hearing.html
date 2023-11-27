@@ -1,0 +1,260 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">Respond to claim</h1>
+          </div>
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
+
+
+          <h2 class="govuk-heading-m">Hearing Availability</h2>
+          <p>Are there any dates in the next twelve months when you, your client, an expert or a witness cannot attend a hearing?</p>
+
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                    Single date
+                </label>
+            </div>
+            <div class="govuk-radios__conditional" id="conditional-contact">
+                <div class="govuk-date-input">
+                    <div id="more-detail-hint" class="govuk-hint">
+                        For example, 01 09 2022
+                      </div>
+    <!-- Date input fields for Single Date option -->
+    <div class="govuk-date-input__item">
+        <label class="govuk-label" for="single-day">Day:</label>
+        <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-2" id="single-day" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+        </div>
+    </div>
+    <div class="govuk-date-input__item">
+        <label class="govuk-label" for="single-month">Month:</label>
+        <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-2" id="single-month" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+        </div>
+    </div>
+    <div class="govuk-date-input__item">
+        <label class="govuk-label" for="single-year">Year:</label>
+        <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-4" id="single-year" type="text" maxlength="4" pattern="[0-9]*" inputmode="numeric">
+        </div>
+    </div>
+</div>
+</div>
+<div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="longer-period" data-aria-controls="conditional-contact-2">
+    <label class="govuk-label govuk-radios__label" for="contact-2">
+        Longer period of time
+    </label>
+</div>
+
+<div class="govuk-radios__conditional" id="conditional-contact-2">
+    <p>From:</p>
+    <div class="govuk-date-input">
+        <div id="more-detail-hint" class="govuk-hint">
+            For example, 01 09 2022
+          </div>
+        <!-- "From" Date input fields for Longer Period of Time option -->
+        <div class="govuk-date-input__item">
+            <label class="govuk-label" for="from-day">Day:</label>
+            <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-2" id="from-day" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <label class="govuk-label" for="from-month">Month:</label>
+            <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-2" id="from-month" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <label class="govuk-label" for="from-year">Year:</label>
+            <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-4" id="from-year" type="text" maxlength="4" pattern="[0-9]*" inputmode="numeric">
+            </div>
+        </div>
+
+        <br>
+
+        <p>To:</p>
+
+        <!-- "To" Date input fields for Longer Period of Time option -->
+        <div class="govuk-date-input__item">
+            <label class="govuk-label" for="to-day">Day:</label>
+            <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-2" id="to-day" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <label class="govuk-label" for="to-month">Month:</label>
+            <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-2" id="to-month" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+            </div>
+        </div>
+        <div class="govuk-date-input__item">
+            <label class="govuk-label" for="to-year">Year:</label>
+            <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-4" id="to-year" type="text" maxlength="4" pattern="[0-9]*" inputmode="numeric">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+              <div class="govuk-!-padding-bottom-5"></div>
+             
+              <div id="additional-date-section" style="display: none;">
+
+                <h1 class="govuk-heading-m">Add a single date or longer period of time that you, your client, an expert or a witness cannot attend a hearing</h1>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="contact-3" name="contact-3" type="radio" value="additional-option" data-aria-controls="conditional-contact-3">
+                          <label class="govuk-label govuk-radios__label" for="contact-3">
+                              Single date
+                          </label>
+                      </div>
+                  
+                      <div class="govuk-radios__conditional" id="conditional-contact-3">
+                          <div class "govuk-date-input">
+                              <div id="more-detail-hint" class="govuk-hint">
+                                  For example, 01 09 2022
+                              </div>
+                              <!-- Date input fields for Single Date option -->
+                              <div class="govuk-date-input__item">
+                                  <label class="govuk-label" for="additional-single-day">Day:</label>
+                                  <div class="govuk-form-group">
+                                      <input class="govuk-input govuk-input--width-2" id="additional-single-day" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+                                  </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                  <label class="govuk-label" for="additional-single-month">Month:</label>
+                                  <div class="govuk-form-group">
+                                      <input class="govuk-input govuk-input--width-2" id="additional-single-month" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+                                  </div>
+                              </div>
+                              <div class="govuk-date-input__item">
+                                  <label class="govuk-label" for="additional-single-year">Year:</label>
+                                  <div class="govuk-form-group">
+                                      <input class="govuk-input govuk-input--width-4" id="additional-single-year" type="text" maxlength="4" pattern="[0-9]*" inputmode="numeric">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="contact-4" name="contact-3" type="radio" value="additional-option-2" data-aria-controls="conditional-contact-4">
+                          <label class="govuk-label govuk-radios__label" for="contact-4">
+                              Longer period of time
+                          </label>
+                      </div>
+                  
+                      <div class="govuk-radios__conditional" id="conditional-contact-4">
+                        <p>From:</p>
+                        <div class="govuk-date-input">
+                            <div id="more-detail-hint" class="govuk-hint">
+                                For example, 01 09 2022
+                              </div>
+                            <!-- "From" Date input fields for Longer Period of Time option -->
+                            <div class="govuk-date-input__item">
+                                <label class="govuk-label" for="from-day">Day:</label>
+                                <div class="govuk-form-group">
+                                    <input class="govuk-input govuk-input--width-2" id="from-day" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <label class="govuk-label" for="from-month">Month:</label>
+                                <div class="govuk-form-group">
+                                    <input class="govuk-input govuk-input--width-2" id="from-month" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <label class="govuk-label" for="from-year">Year:</label>
+                                <div class="govuk-form-group">
+                                    <input class="govuk-input govuk-input--width-4" id="from-year" type="text" maxlength="4" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                            </div>
+                    
+                            <br>
+                    
+                            <p>To:</p>
+                    
+                            <!-- "To" Date input fields for Longer Period of Time option -->
+                            <div class="govuk-date-input__item">
+                                <label class="govuk-label" for "to-day">Day:</label>
+                                <div class="govuk-form-group">
+                                    <input class="govuk-input govuk-input--width-2" id="to-day" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <label class="govuk-label" for "to-month">Month:</label>
+                                <div class="govuk-form-group">
+                                    <input class="govuk-input govuk-input--width-2" id="to-month" type="text" maxlength="2" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <label class="govuk-label" for "to-year">Year:</label>
+                                <div class="govuk-form-group">
+                                    <input class="govuk-input govuk-input--width-4" id="to-year" type="text" maxlength="4" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+              </div>
+
+              <div class="govuk-!-padding-bottom-4"></div> 
+
+              <button type="button" id="add-date-button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Add another date or period of time
+              </button>
+              
+
+            <div class="govuk-!-padding-bottom-5"></div>
+
+            <button type="button" id="previous-button" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.location.href='dates-unavailable-hearing.html'">
+                Previous
+              </button>  
+
+            <a href="interpreter-hearing.html">
+              <button type="button" id="save-continue-button" class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+            </a>
+
+            <div class="govuk-button-group">
+                <a class="govuk-link" href="start-dashboard-defendant.html">Cancel</a>
+              </div>
+            
+        </fieldset>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript to show/hide the additional date section when the button is clicked
+  document.getElementById('add-date-button').addEventListener('click', function () {
+    var additionalDateSection = document.getElementById('additional-date-section');
+    additionalDateSection.style.display = 'block';
+  });
+</script>
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

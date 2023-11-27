@@ -1,0 +1,81 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">View and respond to defence</h1>
+          </div>
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
+
+          <h2 class="govuk-heading-m">Mediation Availability</h2>
+
+          <p>Are there any dates in the next 3 months when you, your client, an expert or a witness cannot attend <br>a mediation appointment?</p>
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          {{ govukRadios({
+            name: "availability",
+            fieldset: {
+              legend: {
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: "The Small Claims Mediation Service operates Monday to Friday from 8am to 5pm, except bank holidays"
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+        
+          <button type="button" id="previous-button" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.location.href='telephone-number-claimant.html'">
+            Previous
+          </button>          
+          
+          <button type="button" id="save-continue-button" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+          <div class="govuk-button-group">
+            <a class="govuk-link" href="start-dashboard-claimant.html">Cancel</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToPreviousPage() {
+      // Add the URL of the previous page you want to link to
+      window.location.href = "previous-page.html";
+    }
+
+    document.getElementById("save-continue-button").addEventListener("click", function() {
+      var selectedValue = document.querySelector('input[name="availability"]:checked').value;
+
+      if (selectedValue === "yes") {
+        window.location.href = "date-picker-claimant.html";
+      } else if (selectedValue === "no") {
+        window.location.href = "interpreter-claimant.html.html";  
+      }
+    });
+  </script>
+{% endblock %}

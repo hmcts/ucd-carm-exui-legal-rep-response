@@ -1,0 +1,74 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">Case list</h1>
+          </div> <!-- Close the "case-header" container -->
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h2 class="govuk-heading-m">Your cases</h2>
+
+          <p>Showing <strong>1</strong> to <strong>1</strong> of <strong>1</strong> results <a href="#">Reset case selection</a></p>
+
+          
+       
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header app-custom-class"> <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                      <strong>CCD Case Number</strong>
+                    </label>
+                  </div></th>
+
+                  <td class="govuk-table__cell app-custom-class"><strong>State</strong></th>
+                    <td class="govuk-table__cell app-custom-class"><strong>CaseMan reference <br>issued</strong></th>
+                      <td class="govuk-table__cell app-custom-class"><strong>Date Claim <br>issued</strong></th>
+                        <td class="govuk-table__cell app-custom-class"><strong>Claimant <br>Reference</strong></th>
+                          <td class="govuk-table__cell app-custom-class"><strong>Defendant <br>Reference(s)</strong></th>
+                            <td class="govuk-table__cell app-custom-class"><strong>Party <br>Names</strong></th>
+                              <td class="govuk-table__cell app-custom-class"><strong>Next <br>Deadline</strong></th>
+                
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+
+                <th scope="col" class="govuk-table__header app-custom-class"> <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    <a href="#" class="govuk-link">1234-4534-7865-4563</a>
+                    </label>
+                  </div></th>
+                  
+                <td class="govuk-table__cell app-custom-class">Awaiting claimant intention</td>
+                <td class="govuk-table__cell app-custom-class">568MC724</td>
+                <td class="govuk-table__cell app-custom-class">11 Aug 2023</td>
+                <td class="govuk-table__cell app-custom-class">Applicant reference</td>
+                <td class="govuk-table__cell app-custom-class"></td>
+                <td class="govuk-table__cell app-custom-class"></td>
+                <td class="govuk-table__cell app-custom-class"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><a href="#">> Why are some cases unselectable?</a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">View and respond to defence</h1>
+          </div> <!-- Close the "case-header" container -->
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
+
+            <p>Defends all of the claim</p>
+
+            <h3 class="govuk-heading-m">Defendant response form</h3>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  
+                </h1>
+              </legend>
+           
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    
+                      <p>Does the claimant want to proceed with the claim?</p>
+                    
+                  </legend>
+                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changedName">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="changedName-2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+
+
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-button-group">
+            <a href="start-dashboard-claimant.html">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Previous
+              </button>
+            </a>
+            <a href="telephone-mediation-claimant.html">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+            </a>
+          </div>
+
+          <div class="govuk-button-group">
+          <a class="govuk-link" href="start-dashboard-claimant.html">Cancel</a>
+        </div>
+
+
+
+
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layouts/main-legalrep.html" %}
+
+{% block pageTitle %}
+  Manage cases – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block main %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="grid-item-case-list govuk-heading-xl">
+          <div class="case-header">
+            <h1 class="case-list-header" style="font-size: 40px;">Respond to claim</h1>
+          </div> <!-- Close the "case-header" container -->
+          <div class="govuk-!-padding-bottom-8"></div>
+
+          <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
+
+          <h2 class="govuk-heading-m">Support with access needs</h2>
+
+            <p>Does anyone require support for a court hearing or mediation appointment?</p>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="yes" onclick="toggleTextArea()">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="no" onclick="toggleTextArea()">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                    No
+                  </label>
+                </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group" id="textareaSection" style="display: none;">
+            <label class="govuk-label" for="reason">
+              Please name all people who need support and the kind of support they will need. For example, Jane Smith: requires wheelchair access.
+            </label>
+            <textarea class="govuk-textarea" id="reason" name="reason" rows="4"></textarea>
+          </div>
+
+          <div class="govuk-button-group">
+            <a href="court-location.html">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Previous
+              </button>
+            </a>
+            <a href="vulnerability-questions.html">
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+            </a>
+          </div>
+
+          <div class="govuk-button-group">
+          <a class="govuk-link" href="start-dashboard-defendant.html">Cancel</a>
+        </div>
+
+        <script>
+          function toggleTextArea() {
+            var textareaSection = document.getElementById('textareaSection');
+            var yesRadioButton = document.getElementById('whereDoYouLive');
+            
+            textareaSection.style.display = yesRadioButton.checked ? 'block' : 'none';
+          }
+        </script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
