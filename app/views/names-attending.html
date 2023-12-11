@@ -16,7 +16,7 @@
 
           <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
       
-                <p>Please provide the names of the people who will be attending the mediation appointment</p>
+                <p>Please provide the name of the person who will be attending the mediation appointment</p>
 
                 <div class="govuk-!-padding-bottom-4"></div>
           
@@ -24,12 +24,17 @@
             <div id="inputs-container">
               <div class="input-row">
                 <input class="govuk-input" type="text" name="more-detail" maxlength="15" aria-describedby="more-detail-hint" style="width: 20ch;">
-                <button class="govuk-button govuk-button--secondary" onclick="deleteInput(this)">Delete</button>
+                
               </div>
-            </div>
-         
 
-          <button class="govuk-button govuk-button--secondary" onclick="addAnother()">Add Another</button>
+              <div class="govuk-!-padding-bottom-6"></div>
+         
+            </div>
+
+
+    
+
+          <button class="govuk-button govuk-button" onclick="addAnother()">Add new</button>
 
      
 
@@ -86,7 +91,7 @@
       if (inputsContainer.children.length > 0) {
         var deleteButton = document.createElement('button');
         deleteButton.className = 'govuk-button govuk-button--secondary';
-        deleteButton.textContent = 'Delete';
+        deleteButton.textContent = 'Remove';
         deleteButton.onclick = function () {
           deleteInputRow(newInputRow);
         };

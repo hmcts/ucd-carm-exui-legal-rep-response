@@ -23,6 +23,29 @@
           <p>The Small Claims Mediation Service operates Monday to Friday from 8am to 5pm, except bank holidays.</p>
 
           <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="mediationAvailabilityYes" name="mediationAvailability" type="radio" value="yes" onclick="toggleMediationAvailability()">
+                  <label class="govuk-label govuk-radios__label" for="mediationAvailabilityYes">Yes</label>
+                </div>
+
+             <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="mediationAvailabilityNo" name="mediationAvailability" type="radio" value="no" onclick="toggleMediationAvailability()">
+    <label class="govuk-label govuk-radios__label" for="mediationAvailabilityNo">No</label>
+  </div>
+
+
+
+        
+  <div id="mediationAvailabilityDetails" style="display: none;">
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <h2 class="govuk-heading-m">Unavailable dates</h2>
+
+    <p>Add a single date or a date range</p>
+
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
                 <label class="govuk-label govuk-radios__label" for="contact">
@@ -58,7 +81,7 @@
 <div class="govuk-radios__item">
     <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="longer-period" data-aria-controls="conditional-contact-2">
     <label class="govuk-label govuk-radios__label" for="contact-2">
-        Longer period of time
+        Date range
     </label>
 </div>
 
@@ -115,10 +138,10 @@
 </div>
 </div>
               <div class="govuk-!-padding-bottom-5"></div>
-             
-              <div id="additional-date-section" style="display: none;">
 
-                <h1 class="govuk-heading-m">Add a single date or longer period of time that you, your client or a nominated person cannot attend mediation</h1>
+            
+              <div id="additional-date-section" style="display: none;">
+             
                   <div class="govuk-radios" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="contact-3" name="contact-3" type="radio" value="additional-option" data-aria-controls="conditional-contact-3">
@@ -153,11 +176,13 @@
                               </div>
                           </div>
                       </div>
+
+                    
                   
                       <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="contact-4" name="contact-3" type="radio" value="additional-option-2" data-aria-controls="conditional-contact-4">
                           <label class="govuk-label govuk-radios__label" for="contact-4">
-                              Longer period of time
+                              Date range
                           </label>
                       </div>
                   
@@ -211,18 +236,82 @@
                                 </div>
                             </div>
                         </div>
+
+                    
+
                     </div>
+
+           
+                
+
                     </div>
+
+                    <div class="govuk-!-padding-bottom-8"></div>
+                    
+
+                    <button type="button" id="delete-date-button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                      Remove
+                    </button>
+
+
+                  
+              </div>
+            
+
+              <div class="govuk-!-padding-bottom-4">
+
+        
+               
+
+                
               </div>
 
-              <div class="govuk-!-padding-bottom-4"></div> 
+              <button type="button" id="add-date-button" class="govuk-button govuk-button" data-module="govuk-button">
+                Add new
+            </button>
+        </div>
+    </div>
 
-              <button type="button" id="add-date-button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Add another date or period of time
-              </button>
+    <div class="govuk-!-padding-bottom-4"></div>
               
+              <p>Will you be using an interpreter at the hearing, either for your client, or for a witness?</p>
 
-            <div class="govuk-!-padding-bottom-5"></div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      
+                    </h1>
+                  </legend>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="yes" onclick="toggleExpertInputs()">
+                      <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="no" onclick="toggleExpertInputs()">
+                      <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+    
+              <div class="govuk-form-group" id="expertInputs" style="display: none;">
+                <!-- Bold title for the expert details -->
+                <h2 class="govuk-heading-m"></h2>
+    
+                <!-- Two text areas with titles -->
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="textarea1">Type of interpreter</label>
+                  <textarea class="govuk-textarea" id="textarea1" name="textarea1" rows="4"></textarea>
+                </div>
+              </div>
+
+            <div class="govuk-!-padding-bottom-3"></div>
 
             <button type="button" id="previous-button" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.location.href='dates-unavailable.html'">
                 Previous
@@ -245,6 +334,12 @@
   </div>
 </div>
 
+<style>.govuk-radios__item {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+  }</style>
+
+
 <script>
   // JavaScript to show/hide the additional date section when the button is clicked
   document.getElementById('add-date-button').addEventListener('click', function () {
@@ -252,6 +347,39 @@
     additionalDateSection.style.display = 'block';
   });
 </script>
+
+<script>
+    function toggleExpertInputs() {
+      var expertInputs = document.getElementById('expertInputs');
+      var yesRadioButton = document.getElementById('whereDoYouLive');
+
+      expertInputs.style.display = yesRadioButton.checked ? 'block' : 'none';
+    }
+  </script>
+
+<script>
+    function toggleMediationAvailability() {
+        var mediationAvailabilityDetails = document.getElementById('mediationAvailabilityDetails');
+        var yesRadioButton = document.getElementById('mediationAvailabilityYes');
+
+        mediationAvailabilityDetails.style.display = yesRadioButton.checked ? 'block' : 'none';
+    }
+</script>
+
+<script>
+  // JavaScript to show/hide the additional date section when the button is clicked
+  document.getElementById('add-date-button').addEventListener('click', function () {
+    var additionalDateSection = document.getElementById('additional-date-section');
+    additionalDateSection.style.display = 'block';
+  });
+
+  // JavaScript to hide the additional date section when the delete button is clicked
+  document.getElementById('delete-date-button').addEventListener('click', function () {
+    var additionalDateSection = document.getElementById('additional-date-section');
+    additionalDateSection.style.display = 'none';
+  });
+</script>
+
 
 </div>
 </div>
