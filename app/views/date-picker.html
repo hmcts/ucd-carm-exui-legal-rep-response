@@ -17,8 +17,6 @@
 
           <h3 class="govuk-heading-m">#1234-5678-9101-2131</h3>
 
-          <h3 class="govuk-heading-m">Mediation contact information</h3>
-
 
           <h2 class="govuk-heading-m">Mediation availability</h2>
           <p>Are there any dates in the next 3 months when you, your client or a nominated person cannot attend
@@ -31,6 +29,7 @@
             The Small Claims Mediation Service operates Monday to Friday from 8am to 5pm, except bank holidays
           </div>
 
+          <div class="side-by-side">
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
@@ -42,6 +41,7 @@
     <input class="govuk-radios__input" id="mediationAvailabilityNo" name="mediationAvailability" type="radio" value="no" onclick="toggleMediationAvailability()">
     <label class="govuk-label govuk-radios__label" for="mediationAvailabilityNo">No</label>
   </div>
+</div>
 
 
 
@@ -305,11 +305,17 @@
   </div>
 </div>
 
-<style>.govuk-radios__item {
-    display: inline-block;
-    margin-right: 10px; /* Adjust margin as needed */
-  }</style>
-
+<style>
+    .govuk-radios__item {
+      display: block; /* Default style */
+      margin-bottom: 10px; /* Default margin */
+    }
+  
+    .side-by-side .govuk-radios__item {
+      display: block; /* Override display for specific section */
+      margin-right: 10px; /* Override margin for specific section */
+    }
+  </style>
 
 <script>
   // JavaScript to show/hide the additional date section when the button is clicked
